@@ -1,0 +1,10 @@
+title: Vega_Exposition
+description: Vega is a visualization grammar , a declarative language for creating , saving and sharing interactive visualisation designs. With Vega, you can describe the visual apperance and interactive behaviour of a visualisation in a JSON format. This allows you to create reusable visualisation components and easily reproduce visualizations across different platforms .
+
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+theme: jekyll-theme-primer
