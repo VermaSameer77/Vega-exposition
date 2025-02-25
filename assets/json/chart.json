@@ -1,24 +1,53 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "An interactive bar chart with hover effect.",
-    "width": 1000, 
-    "height": 400, 
-    "autosize": { "type": "fit", "contains": "padding" },
-    "data": {
-        "values": [
-            {"category": "A", "value": 30},
-            {"category": "B", "value": 80},
-            {"category": "C", "value": 45},
-            {"category": "D", "value": 60},
-            {"category": "E", "value": 20},
-            {"category": "F", "value": 90},
-            {"category": "G", "value": 55}
-        ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "An expanded interactive bar chart with hover effect.",
+  "width": 800,
+  "height": 500,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "data": {
+    "values": [
+      {"category": "A", "value": 30},
+      {"category": "B", "value": 80},
+      {"category": "C", "value": 45},
+      {"category": "D", "value": 60},
+      {"category": "E", "value": 20},
+      {"category": "F", "value": 90},
+      {"category": "G", "value": 55}
+    ]
+  },
+  "mark": {
+    "type": "bar",
+    "tooltip": true,
+    "bar": {"size": 50}
+  },
+  "encoding": {
+    "x": {
+      "field": "category",
+      "type": "ordinal",
+      "axis": { "labelAngle": 0 }
     },
-    "mark": "bar",
-    "encoding": {
-        "x": { "field": "category", "type": "ordinal", "axis": { "labelAngle": 0 } },
-        "y": { "field": "value", "type": "quantitative" },
-        "color": { "field": "category", "type": "nominal" }
+    "y": {
+      "field": "value",
+      "type": "quantitative"
+    },
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field": "category",
+        "type": "nominal"
+      },
+      "value": "lightgray"
     }
+  },
+  "params": [
+    {
+      "name": "hover",
+      "select": {
+        "type": "point",
+        "fields": ["category"],
+        "on": "mouseover",
+        "clear": "mouseout"
+      }
+    }
+  ]
 }
