@@ -16,8 +16,8 @@ description: >-
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Site URL settings (update for GitHub Pages)
-url: "https://vermasameer77.github.io"
-baseurl: "/Vega_Exposition"
+url: "https://VermaSameer77.github.io"
+baseurl: "/Vega-exposition"
 
 github:
   username: VermaSameer77  # Fixed username
@@ -29,13 +29,7 @@ social:
     - https://github.com/VermaSameer77  
 
 # Site Verification Settings (optional)
-webmaster_verifications:
-  google:  
-  bing:  
-  alexa:  
-  yandex:  
-  baidu:  
-  facebook:  
+:  
 
 # Web Analytics Settings (optional)
 analytics:
@@ -47,7 +41,7 @@ pageviews:
   provider:  
 
 # Theme preferences
-theme_mode:  
+theme_mode:  minima 
 
 # CDN settings
 cdn: "https://chirpy-img.netlify.app"
@@ -163,3 +157,8 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
